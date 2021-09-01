@@ -7,11 +7,11 @@ console.log(notes)
 
 
 // save to db from note.data.js
-if( localStorage.length === 0 ){
-    for( note of notes ){
-        saveIntoDb( note )
-    }
-}
+//if( localStorage.length === 0 ){
+  //  for( note of notes ){
+    //    saveIntoDb( note )
+    //}
+//}
 
 
 // go to fetch
@@ -25,8 +25,10 @@ if( localStorage.length !== 0 ){
 
 
         let noteItemContainer = document.createElement("li")
-        noteItemContainer.setAttribute("class", "list-group-item d-flex justify-content-between align-items-start")
+        noteItemContainer.setAttribute("class", "list-group-item")
         noteItemContainer.setAttribute("id", "note" + key)
+
+       
 
         let noteItemContent = document.createElement("div")
         noteItemContent.setAttribute("class", "ms-2 me-auto")
@@ -40,7 +42,7 @@ if( localStorage.length !== 0 ){
 
         let noteItemContentId = document.createElement("span")
         noteItemContentId.setAttribute("class", "badge bg-primary rounded-pill")
-        noteItemContentId.textContent = key
+        //noteItemContentId.textContent = key
 
         let buttonContainer = document.createElement("div")
         buttonContainer.setAttribute("class", "row")
@@ -59,13 +61,15 @@ if( localStorage.length !== 0 ){
         lightButtonElement.setAttribute("id", "edit" + key)
         lightButtonElement.setAttribute("name", key)
 
-        buttonContainer.appendChild(deleteButtonElement)
         buttonContainer.appendChild(lightButtonElement)
+        buttonContainer.appendChild(deleteButtonElement)
         noteItemContent.appendChild(noteItemContentTitle)
         noteItemContent.appendChild(noteItemContentDescription)
         noteItemContainer.appendChild(noteItemContent)
         noteItemContent.appendChild(buttonContainer)
         noteItemContainer.appendChild(noteItemContentId)
+        //buttonContainer.prepend( noteItemContainer)
+        noteItemContainer.appendChild(noteItemContent)
 
         noteListElementBootstrap.appendChild(noteItemContainer)
 
@@ -79,8 +83,6 @@ let newTabButtonElement = document.getElementById("new-tab")
 newTabButtonElement.addEventListener("click", (e) => {
      window.open("create.html", '_blank').focus()
      var windowObjectReference;
-//var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-   // window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
 })
 
 document.addEventListener("click", (e) => {
