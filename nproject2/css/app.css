@@ -1,0 +1,29 @@
+input {
+    padding: 5px;
+    margin: 5px;
+    
+}
+.container {
+    padding: 40px;
+}
+
+.note-item {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.edit{
+    background-color: green;
+}
+
+.delete{
+    background-color: red;
+}
+
+.note-item-action{
+
+}

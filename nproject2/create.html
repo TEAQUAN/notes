@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWNOTE</title>
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+     <link rel="stylesheet" href="./css/style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <a class="btn btn-success" href="index.html" onclick="history.go(-1)">Go Back</a>
+    <div class="container">
+        <form class="row g-3">
+            <div class="col-12">
+                
+            </div>
+            <div class="col-12">
+                <label for="title" class="form-label">Title</label>
+                <input  border-radius: 5px; size="50" type="text" class="forms" id="title" placeholder="INPUT TITLE" [(ngModel)]="title">
+            </div>
+            <div class="col-12">
+                <label for="description" class="form-label">Content</label>
+                <textarea id="description" class="form-control" aria-label="With textarea"></textarea>                
+            </div>
+            <div class="col-12">
+                <button type="button" class="success"  id="save">Save</button> 
+  </div>
+        </form>
+    </div>
+    
+    <script>
+          
+      
+        </script>
+
+    <script src="utility.js"></script>
+    <script src="./notes.data.js" ></script>
+    <script src="./create.js" ></script>
+    
+</body>
+</html>
